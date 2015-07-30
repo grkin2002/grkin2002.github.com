@@ -4,26 +4,38 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>an easily confused problem | KINPAN&#39;s Page</title>
+    <title>23 design patterns (super concise) | KINPAN&#39;s Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="kin pan">
     
 
     
-    <meta name="description" content="an easily confued problemproblem: there is return statement in try{}, does code in finally{} be executed? when will it be executed, before the return statement or after?
-somebody answer: finally{} wil">
+    <meta name="description" content="关于设计模式这个设计模式参考提供四人帮23种模式的快速参考，每个模式包括，类图，解释，使用说明和实际例子。
+创建模式：用来构建对象以便能从实现系统解耦。
+结构模式：用不同的对象组成大规模的对象结构。
+行为模式：用来在对象中管理算法，关系，和责任。
+对象层面：处理对象之间的关系，决定于运行期。
+类层面：处理类的关系，决定于在编译期。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="an easily confused problem">
-<meta property="og:url" content="http://grkin2002.github.io/2015/07/30/an-easily-confused-problem/index.html">
+<meta property="og:title" content="23 design patterns (super concise)">
+<meta property="og:url" content="http://grkin2002.github.io/2015/07/30/23-design-patterns-super-concise/index.html">
 <meta property="og:site_name" content="KINPAN's Page">
-<meta property="og:description" content="an easily confued problemproblem: there is return statement in try{}, does code in finally{} be executed? when will it be executed, before the return statement or after?
-somebody answer: finally{} wil">
-<meta property="og:updated_time" content="2015-07-30T07:04:55.681Z">
+<meta property="og:description" content="关于设计模式这个设计模式参考提供四人帮23种模式的快速参考，每个模式包括，类图，解释，使用说明和实际例子。
+创建模式：用来构建对象以便能从实现系统解耦。
+结构模式：用不同的对象组成大规模的对象结构。
+行为模式：用来在对象中管理算法，关系，和责任。
+对象层面：处理对象之间的关系，决定于运行期。
+类层面：处理类的关系，决定于在编译期。">
+<meta property="og:updated_time" content="2015-07-30T07:23:37.481Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="an easily confused problem">
-<meta name="twitter:description" content="an easily confued problemproblem: there is return statement in try{}, does code in finally{} be executed? when will it be executed, before the return statement or after?
-somebody answer: finally{} wil">
+<meta name="twitter:title" content="23 design patterns (super concise)">
+<meta name="twitter:description" content="关于设计模式这个设计模式参考提供四人帮23种模式的快速参考，每个模式包括，类图，解释，使用说明和实际例子。
+创建模式：用来构建对象以便能从实现系统解耦。
+结构模式：用不同的对象组成大规模的对象结构。
+行为模式：用来在对象中管理算法，关系，和责任。
+对象层面：处理对象之间的关系，决定于运行期。
+类层面：处理类的关系，决定于在编译期。">
 
     
     <link rel="alternative" href="/atom.xml" title="KINPAN&#39;s Page" type="application/atom+xml">
@@ -83,14 +95,14 @@ somebody answer: finally{} wil">
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/07/30/an-easily-confused-problem/" title="an easily confused problem" itemprop="url">an easily confused problem</a>
+      <a href="/2015/07/30/23-design-patterns-super-concise/" title="23 design patterns (super concise)" itemprop="url">23 design patterns (super concise)</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="kin pan" target="_blank" itemprop="author">kin pan</a>
 		
   <p class="article-time">
-    <time datetime="2015-07-30T06:41:20.000Z" itemprop="datePublished"> 發表於 2015-07-30</time>
+    <time datetime="2015-07-30T07:18:59.000Z" itemprop="datePublished"> 發表於 2015-07-30</time>
     
   </p>
 </header>
@@ -99,63 +111,16 @@ somebody answer: finally{} wil">
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目錄</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#an_easily_confued_problem"><span class="toc-number">1.</span> <span class="toc-text">an easily confued problem</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#A_small_test"><span class="toc-number">1.0.1.</span> <span class="toc-text">A small test</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#second_situation"><span class="toc-number">1.0.2.</span> <span class="toc-text">second situation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#summary"><span class="toc-number">1.0.3.</span> <span class="toc-text">summary</span></a></li></ol></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#关于设计模式"><span class="toc-number">1.</span> <span class="toc-text">关于设计模式</span></a></li></ol>
 		
 		</div>
 		
-		<h2 id="an_easily_confued_problem">an easily confued problem</h2><p>problem: there is return statement in <code>try{}</code>, does code in <code>finally{}</code> be executed? when will it be executed, before the <code>return</code> statement or after?</p>
-<p>somebody answer: <code>finally{}</code> will executed before <code>return</code> statement. that is wrong. </p>
-<h4 id="A_small_test">A small test</h4><pre><code><span class="type">int</span> <span class="literal">result</span> =  test(); 
-
-}
-
-private <span class="type">int</span>  test() 
-{ 
-    <span class="type">int</span> i = <span class="number">0</span>; 
-    <span class="type">int</span> j = <span class="number">0</span>; 
-    <span class="keyword">try</span> 
-    { 
-        ++i; 
-        ++j; 
-        <span class="keyword">return</span> i+j; 
-    } 
-    catch 
-    { 
-        --i; 
-        <span class="keyword">return</span> i+j; 
-    } 
-    <span class="keyword">finally</span> 
-    { 
-        ++i; 
-    }
-</code></pre><p>this code, test() return result 2, but not 3, the reason is the statement <code>return i+j;</code> will execute, and store its result in temporary variable, then jump to <code>finally{}</code> to continue, after finished, back to <code>try{}</code> block and return the result in temp.</p>
-<h4 id="second_situation">second situation</h4><p>the following case is we throw an exception in <code>try{}</code></p>
-<pre><code><span class="type">int</span> <span class="literal">result</span> =  test(); 
-
-}
-
-private <span class="type">int</span>  test() 
-{ 
-    <span class="type">int</span> i = <span class="number">0</span>; 
-    <span class="type">int</span> j = <span class="number">0</span>; 
-    <span class="keyword">try</span> 
-    { 
-        ++i; 
-        ++j; 
-        throw new <span class="type">Exception</span>(); 
-        <span class="keyword">return</span> i+j; 
-    } 
-    catch 
-    { 
-        --i; 
-        <span class="keyword">return</span> i+j; 
-    } 
-    <span class="keyword">finally</span> 
-    { 
-        ++i; 
-    }
-</code></pre><p>after the exception, it will jump to <code>catch{}</code>, then to <code>finally{}</code>, then jump back to the end of <code>catch{}</code> block. </p>
-<h4 id="summary">summary</h4><p><code>return</code> statement is executed before the <code>finally{}</code> block. </p>
+		<h2 id="关于设计模式">关于设计模式</h2><p>这个设计模式参考提供四人帮23种模式的快速参考，每个模式包括，类图，解释，使用说明和实际例子。</p>
+<p><em>创建模式：用来构建对象以便能从实现系统解耦。</em></p>
+<p><em>结构模式：用不同的对象组成大规模的对象结构。</em></p>
+<p><em>行为模式：用来在对象中管理算法，关系，和责任。</em></p>
+<p><em>对象层面：处理对象之间的关系，决定于运行期。</em></p>
+<p><em>类层面：处理类的关系，决定于在编译期。</em></p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -168,7 +133,7 @@ private <span class="type">int</span>  test()
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://grkin2002.github.io/2015/07/30/an-easily-confused-problem/" data-title="an easily confused problem | KINPAN&#39;s Page" data-tsina="null" class="share clearfix">
+	  <div data-url="http://grkin2002.github.io/2015/07/30/23-design-patterns-super-concise/" data-title="23 design patterns (super concise) | KINPAN&#39;s Page" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -181,14 +146,14 @@ private <span class="type">int</span>  test()
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2015/07/30/23-design-patterns-super-concise/" title="23 design patterns (super concise)">
-  <strong>上一篇：</strong><br/>
-  <span>
-  23 design patterns (super concise)</span>
+
+<div class="next">
+<a href="/2015/07/30/an-easily-confused-problem/"  title="an easily confused problem">
+ <strong>下一篇：</strong><br/> 
+ <span>an easily confused problem
+</span>
 </a>
 </div>
-
 
 </nav>
 
@@ -200,7 +165,7 @@ private <span class="type">int</span>  test()
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目錄</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#an_easily_confued_problem"><span class="toc-number">1.</span> <span class="toc-text">an easily confued problem</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#A_small_test"><span class="toc-number">1.0.1.</span> <span class="toc-text">A small test</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#second_situation"><span class="toc-number">1.0.2.</span> <span class="toc-text">second situation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#summary"><span class="toc-number">1.0.3.</span> <span class="toc-text">summary</span></a></li></ol></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#关于设计模式"><span class="toc-number">1.</span> <span class="toc-text">关于设计模式</span></a></li></ol>
  
   </div>
 
