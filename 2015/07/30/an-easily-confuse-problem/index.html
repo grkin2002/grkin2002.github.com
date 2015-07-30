@@ -33,7 +33,7 @@ private int  test()
 private int  test() 
 { 
     int i = 0;">
-<meta property="og:updated_time" content="2015-07-30T06:03:26.782Z">
+<meta property="og:updated_time" content="2015-07-30T06:04:08.669Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="an.easily.confuse.problem">
 <meta name="twitter:description" content="一个常见的问题，混淆的答案问题是：try{} 里有一个return语句， 那么紧跟这个try后的finally{}里的code会不会被执行，什么时候被执行， 在return前还是后？
@@ -120,7 +120,7 @@ private int  test()
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目錄</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一个常见的问题，混淆的答案"><span class="toc-number">1.</span> <span class="toc-text">一个常见的问题，混淆的答案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#这个问题可以用一个小实验得到解答"><span class="toc-number">1.0.1.</span> <span class="toc-text">这个问题可以用一个小实验得到解答</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#下面的情况是try{}块里发生了异常"><span class="toc-number">1.0.2.</span> <span class="toc-text">下面的情况是try{}块里发生了异常</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#可见说return_语句先于finally快执行的说法是不正确的。"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">可见说return 语句先于finally快执行的说法是不正确的。</span></a></li></ol></li></ol></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一个常见的问题，混淆的答案"><span class="toc-number">1.</span> <span class="toc-text">一个常见的问题，混淆的答案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#这个问题可以用一个小实验得到解答"><span class="toc-number">1.0.1.</span> <span class="toc-text">这个问题可以用一个小实验得到解答</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#下面的情况是try{}块里发生了异常"><span class="toc-number">1.0.2.</span> <span class="toc-text">下面的情况是try{}块里发生了异常</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#可见说return_语句先于finally快执行的说法是不正确的。"><span class="toc-number">1.0.3.</span> <span class="toc-text">可见说return 语句先于finally快执行的说法是不正确的。</span></a></li></ol></li></ol></li></ol>
 		
 		</div>
 		
@@ -175,7 +175,7 @@ private <span class="type">int</span>  test()
         ++i; 
     }
 </code></pre><p>这段代码的异常出现后，跳到catch{}块执行，之后跳到finally{}块执行， 之后跳回catch{}块结尾处返回。</p>
-<h4 id="可见说return_语句先于finally快执行的说法是不正确的。">可见说return 语句先于finally快执行的说法是不正确的。</h4>  
+<h3 id="可见说return_语句先于finally快执行的说法是不正确的。">可见说return 语句先于finally快执行的说法是不正确的。</h3>  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
@@ -206,7 +206,7 @@ private <span class="type">int</span>  test()
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目錄</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一个常见的问题，混淆的答案"><span class="toc-number">1.</span> <span class="toc-text">一个常见的问题，混淆的答案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#这个问题可以用一个小实验得到解答"><span class="toc-number">1.0.1.</span> <span class="toc-text">这个问题可以用一个小实验得到解答</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#下面的情况是try{}块里发生了异常"><span class="toc-number">1.0.2.</span> <span class="toc-text">下面的情况是try{}块里发生了异常</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#可见说return_语句先于finally快执行的说法是不正确的。"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">可见说return 语句先于finally快执行的说法是不正确的。</span></a></li></ol></li></ol></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一个常见的问题，混淆的答案"><span class="toc-number">1.</span> <span class="toc-text">一个常见的问题，混淆的答案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#这个问题可以用一个小实验得到解答"><span class="toc-number">1.0.1.</span> <span class="toc-text">这个问题可以用一个小实验得到解答</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#下面的情况是try{}块里发生了异常"><span class="toc-number">1.0.2.</span> <span class="toc-text">下面的情况是try{}块里发生了异常</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#可见说return_语句先于finally快执行的说法是不正确的。"><span class="toc-number">1.0.3.</span> <span class="toc-text">可见说return 语句先于finally快执行的说法是不正确的。</span></a></li></ol></li></ol></li></ol>
  
   </div>
 
