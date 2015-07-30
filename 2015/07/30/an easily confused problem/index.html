@@ -11,37 +11,43 @@
     
 
     
-    <meta name="description" content="一个常见的问题，混淆的答案问题是：try{} 里有一个return语句， 那么紧跟这个try后的finally{}里的code会不会被执行，什么时候被执行， 在return前还是后？有的人回答是：finally块先于return执行。 
-这个问题可以用一个小实验得到解答int result =  test(); 
+    <meta name="description" content="一个常见的问题，混淆的答案问题是：try{} 里有一个return语句， 那么紧跟这个try后的finally{}里的code会不会被执行，什么时候被执行， 在return前还是后？
+有的人回答是：finally块先于return执行。 
+一个小实验int result =  test(); 
 
 }
 
 private int  test() 
 { 
-    int i = 0;">
+    int i = 0; 
+    int">
 <meta property="og:type" content="article">
 <meta property="og:title" content="an.easily.confuse.problem">
 <meta property="og:url" content="http://grkin2002.github.io/2015/07/30/an easily confused problem/index.html">
 <meta property="og:site_name" content="KINPAN's Page">
-<meta property="og:description" content="一个常见的问题，混淆的答案问题是：try{} 里有一个return语句， 那么紧跟这个try后的finally{}里的code会不会被执行，什么时候被执行， 在return前还是后？有的人回答是：finally块先于return执行。 
-这个问题可以用一个小实验得到解答int result =  test(); 
+<meta property="og:description" content="一个常见的问题，混淆的答案问题是：try{} 里有一个return语句， 那么紧跟这个try后的finally{}里的code会不会被执行，什么时候被执行， 在return前还是后？
+有的人回答是：finally块先于return执行。 
+一个小实验int result =  test(); 
 
 }
 
 private int  test() 
 { 
-    int i = 0;">
-<meta property="og:updated_time" content="2015-07-30T06:06:26.922Z">
+    int i = 0; 
+    int">
+<meta property="og:updated_time" content="2015-07-30T06:11:18.422Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="an.easily.confuse.problem">
-<meta name="twitter:description" content="一个常见的问题，混淆的答案问题是：try{} 里有一个return语句， 那么紧跟这个try后的finally{}里的code会不会被执行，什么时候被执行， 在return前还是后？有的人回答是：finally块先于return执行。 
-这个问题可以用一个小实验得到解答int result =  test(); 
+<meta name="twitter:description" content="一个常见的问题，混淆的答案问题是：try{} 里有一个return语句， 那么紧跟这个try后的finally{}里的code会不会被执行，什么时候被执行， 在return前还是后？
+有的人回答是：finally块先于return执行。 
+一个小实验int result =  test(); 
 
 }
 
 private int  test() 
 { 
-    int i = 0;">
+    int i = 0; 
+    int">
 
     
     <link rel="alternative" href="/atom.xml" title="KINPAN&#39;s Page" type="application/atom+xml">
@@ -117,12 +123,13 @@ private int  test()
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目錄</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一个常见的问题，混淆的答案"><span class="toc-number">1.</span> <span class="toc-text">一个常见的问题，混淆的答案</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#问题是：try{}_里有一个return语句，_那么紧跟这个try后的finally{}里的code会不会被执行，什么时候被执行，_在return前还是后？"><span class="toc-number">1.0.1.</span> <span class="toc-text">问题是：try{} 里有一个return语句， 那么紧跟这个try后的finally{}里的code会不会被执行，什么时候被执行， 在return前还是后？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#这个问题可以用一个小实验得到解答"><span class="toc-number">1.0.2.</span> <span class="toc-text">这个问题可以用一个小实验得到解答</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#下面的情况是try{}块里发生了异常"><span class="toc-number">1.0.3.</span> <span class="toc-text">下面的情况是try{}块里发生了异常</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#可见说return_语句先于finally快执行的说法是不正确的。"><span class="toc-number">1.0.4.</span> <span class="toc-text">可见说return 语句先于finally快执行的说法是不正确的。</span></a></li></ol></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一个常见的问题，混淆的答案"><span class="toc-number">1.</span> <span class="toc-text">一个常见的问题，混淆的答案</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#一个小实验"><span class="toc-number">1.0.1.</span> <span class="toc-text">一个小实验</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第二种情况"><span class="toc-number">1.0.2.</span> <span class="toc-text">第二种情况</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#总结"><span class="toc-number">1.0.3.</span> <span class="toc-text">总结</span></a></li></ol></li></ol></li></ol>
 		
 		</div>
 		
-		<h2 id="一个常见的问题，混淆的答案">一个常见的问题，混淆的答案</h2><h4 id="问题是：try{}_里有一个return语句，_那么紧跟这个try后的finally{}里的code会不会被执行，什么时候被执行，_在return前还是后？">问题是：try{} 里有一个return语句， 那么紧跟这个try后的finally{}里的code会不会被执行，什么时候被执行， 在return前还是后？</h4><p>有的人回答是：finally块先于return执行。 </p>
-<h4 id="这个问题可以用一个小实验得到解答">这个问题可以用一个小实验得到解答</h4><pre><code><span class="type">int</span> <span class="literal">result</span> =  test(); 
+		<h2 id="一个常见的问题，混淆的答案">一个常见的问题，混淆的答案</h2><p>问题是：try{} 里有一个return语句， 那么紧跟这个try后的finally{}里的code会不会被执行，什么时候被执行， 在return前还是后？</p>
+<p>有的人回答是：finally块先于return执行。 </p>
+<h4 id="一个小实验">一个小实验</h4><pre><code><span class="type">int</span> <span class="literal">result</span> =  test(); 
 
 }
 
@@ -146,7 +153,8 @@ private <span class="type">int</span>  test()
         ++i; 
     }
 </code></pre><p>这段代码的test（）返回值是2，而不是3， 可见 try {}里的 return i+j 里的表达式先求值，然后放到一个暂存变量，之后转到finally{} 块里的代码继续执行，执行完后跳回try{}块结尾，并把转存变量返回</p>
-<h4 id="下面的情况是try{}块里发生了异常">下面的情况是try{}块里发生了异常</h4><pre><code><span class="type">int</span> <span class="literal">result</span> =  test(); 
+<h4 id="第二种情况">第二种情况</h4><p>下面的情况是try{}块里发生了异常</p>
+<pre><code><span class="type">int</span> <span class="literal">result</span> =  test(); 
 
 }
 
@@ -171,7 +179,8 @@ private <span class="type">int</span>  test()
         ++i; 
     }
 </code></pre><p>这段代码的异常出现后，跳到catch{}块执行，之后跳到finally{}块执行， 之后跳回catch{}块结尾处返回。</p>
-<h4 id="可见说return_语句先于finally快执行的说法是不正确的。">可见说return 语句先于finally快执行的说法是不正确的。</h4>  
+<h4 id="总结">总结</h4><p>可见说return 语句先于finally快执行的说法是不正确的。</p>
+  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
@@ -194,19 +203,6 @@ private <span class="type">int</span>  test()
    	       
 	</article>
 	
-<nav class="article-nav clearfix">
- 
-
-<div class="next">
-<a href="/2015/07/30/an-easily-confuse-problem/"  title="an.easily.confuse.problem">
- <strong>下一篇：</strong><br/> 
- <span>an.easily.confuse.problem
-</span>
-</a>
-</div>
-
-</nav>
-
 	
 
 </div>  
@@ -215,7 +211,7 @@ private <span class="type">int</span>  test()
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目錄</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一个常见的问题，混淆的答案"><span class="toc-number">1.</span> <span class="toc-text">一个常见的问题，混淆的答案</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#问题是：try{}_里有一个return语句，_那么紧跟这个try后的finally{}里的code会不会被执行，什么时候被执行，_在return前还是后？"><span class="toc-number">1.0.1.</span> <span class="toc-text">问题是：try{} 里有一个return语句， 那么紧跟这个try后的finally{}里的code会不会被执行，什么时候被执行， 在return前还是后？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#这个问题可以用一个小实验得到解答"><span class="toc-number">1.0.2.</span> <span class="toc-text">这个问题可以用一个小实验得到解答</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#下面的情况是try{}块里发生了异常"><span class="toc-number">1.0.3.</span> <span class="toc-text">下面的情况是try{}块里发生了异常</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#可见说return_语句先于finally快执行的说法是不正确的。"><span class="toc-number">1.0.4.</span> <span class="toc-text">可见说return 语句先于finally快执行的说法是不正确的。</span></a></li></ol></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一个常见的问题，混淆的答案"><span class="toc-number">1.</span> <span class="toc-text">一个常见的问题，混淆的答案</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#一个小实验"><span class="toc-number">1.0.1.</span> <span class="toc-text">一个小实验</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第二种情况"><span class="toc-number">1.0.2.</span> <span class="toc-text">第二种情况</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#总结"><span class="toc-number">1.0.3.</span> <span class="toc-text">总结</span></a></li></ol></li></ol></li></ol>
  
   </div>
 
