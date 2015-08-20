@@ -4,26 +4,26 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>KINPAN&#39;s Page</title>
+    <title>Unix File Permissions | KINPAN&#39;s Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="kin pan">
     
 
     
-    <meta name="description" content="title: Unix File Permissionsdate: 2015-08-21 09:59:46
-The X is the same as x unless the file is a nondirectory and currently has no x bits set. The s (set uid or set gid) can only be specified for use">
+    <meta name="description" content="[toc]
+The X is the same as x unless the file is a nondirectory and currently has no x bits set. The s (set uid or set gid) can only be specified for user or group permissions. The t can only be specif">
 <meta property="og:type" content="article">
-<meta property="og:title" content="KINPAN's Page">
+<meta property="og:title" content="Unix File Permissions">
 <meta property="og:url" content="http://grkin2002.github.io/2015/08/21/Unix-File-Permissions/index.html">
 <meta property="og:site_name" content="KINPAN's Page">
-<meta property="og:description" content="title: Unix File Permissionsdate: 2015-08-21 09:59:46
-The X is the same as x unless the file is a nondirectory and currently has no x bits set. The s (set uid or set gid) can only be specified for use">
-<meta property="og:updated_time" content="2015-08-20T21:49:11.296Z">
+<meta property="og:description" content="[toc]
+The X is the same as x unless the file is a nondirectory and currently has no x bits set. The s (set uid or set gid) can only be specified for user or group permissions. The t can only be specif">
+<meta property="og:updated_time" content="2015-08-20T21:54:16.945Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="KINPAN's Page">
-<meta name="twitter:description" content="title: Unix File Permissionsdate: 2015-08-21 09:59:46
-The X is the same as x unless the file is a nondirectory and currently has no x bits set. The s (set uid or set gid) can only be specified for use">
+<meta name="twitter:title" content="Unix File Permissions">
+<meta name="twitter:description" content="[toc]
+The X is the same as x unless the file is a nondirectory and currently has no x bits set. The s (set uid or set gid) can only be specified for user or group permissions. The t can only be specif">
 
     
     <link rel="alternative" href="/atom.xml" title="KINPAN&#39;s Page" type="application/atom+xml">
@@ -83,14 +83,14 @@ The X is the same as x unless the file is a nondirectory and currently has no x 
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/08/21/Unix-File-Permissions/" title="" itemprop="url"></a>
+      <a href="/2015/08/21/Unix-File-Permissions/" title="Unix File Permissions" itemprop="url">Unix File Permissions</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="kin pan" target="_blank" itemprop="author">kin pan</a>
 		
   <p class="article-time">
-    <time datetime="2015-08-20T21:49:11.296Z" itemprop="datePublished"> 發表於 2015-08-21</time>
+    <time datetime="2015-08-20T23:59:46.000Z" itemprop="datePublished"> 發表於 2015-08-21</time>
     
   </p>
 </header>
@@ -103,7 +103,7 @@ The X is the same as x unless the file is a nondirectory and currently has no x 
 		
 		</div>
 		
-		<p>title: Unix File Permissions<br>date: 2015-08-21 09:59:46</p>
+		<p>[toc]</p>
 <p>The X is the same as x unless the file is a nondirectory and currently has no x bits set. The s (set uid or set gid) can only be specified for user or group permissions. The t can only be specified for user permissions. A few examples with help. Above we saw /usr/bin/passwd was 6555 (-r-sr-sr-x in ls). Here are some ways that could be achieved:<br>chmod 6555 /usr/bin/passwd<br>chmod u=rxs,g=rxs,o=rx /usr/bin/passwd<br>chmod ug=rxs,o=rx /usr/bin/passwd<br>chmod a=rx,ug+s /usr/bin/passwd<br>And there are many other ways to do this. </p>
 <figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">|<span class="string">------file mode------</span>|</span><br><span class="line">|<span class="string">                     </span>|</span><br><span class="line">|<span class="string"></span><br><span class="line"></span>|<span class="string">       </span>|<span class="string">----full-----</span>|</span><br><span class="line">        |<span class="string"></span><br><span class="line"></span>|<span class="string">-type</span>|<span class="string"> </span>|<span class="string">   </span>|<span class="string">--basic--</span>|</span><br><span class="line">|<span class="string">     </span>|<span class="string"> </span>|<span class="string">   </span>|<span class="string">         </span>|</span><br><span class="line">oo0 000 000 000 000 000</span><br><span class="line">... ... ... ... ... ...</span><br><span class="line">   |<span class="string">     </span>|<span class="string">   </span>|<span class="string">   </span>|<span class="string">   </span>|</span><br><span class="line">   |<span class="string">     </span>|<span class="string">   </span>|<span class="string">   </span>|<span class="string">   </span>|<span class="string">---- rwx for other</span><br><span class="line">   </span>|<span class="string">     </span>|<span class="string">   </span>|<span class="string">   </span>|</span><br><span class="line">   |<span class="string">     </span>|<span class="string">   </span>|<span class="string">   </span>|<span class="string">-------- rwx for group</span><br><span class="line">   </span>|<span class="string">     </span>|<span class="string">   </span>|</span><br><span class="line">   |<span class="string">     </span>|<span class="string">   </span>|<span class="string">------------ rwx for user</span><br><span class="line">   </span>|<span class="string">     </span>|</span><br><span class="line">   |<span class="string">     </span>|<span class="string">---------------- set uid, set gid, sticky bit</span><br><span class="line">   </span>|</span><br><span class="line">   |<span class="string">---------------------- file type: regular (-)</span><br><span class="line">                                      directory (d)</span><br><span class="line">                                      character special (c)</span><br><span class="line">                                      block special (b)</span><br><span class="line">                                      fifo (p)</span><br><span class="line">                                      symbolic link (l)</span><br><span class="line">                                      socket (s)</span></span><br></pre></td></tr></table></figure>
 <p>To find out what is those crab, pls go to <a href="http://www.unix.com/tips-and-tutorials/19060-unix-file-permissions.html" target="_blank" rel="external">Unix File Permissions</a></p>
@@ -119,7 +119,7 @@ The X is the same as x unless the file is a nondirectory and currently has no x 
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://grkin2002.github.io/2015/08/21/Unix-File-Permissions/" data-title="KINPAN&#39;s Page" data-tsina="null" class="share clearfix">
+	  <div data-url="http://grkin2002.github.io/2015/08/21/Unix-File-Permissions/" data-title="Unix File Permissions | KINPAN&#39;s Page" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
